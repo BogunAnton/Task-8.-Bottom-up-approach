@@ -1,7 +1,7 @@
 # 4.Входные данные: текст. Результат работы алгоритма: массив анаграмм во входном тексте.
 from main_function import f1, f2, f3
 from additional_functions import is_int
-def menu():
+def menu(): # Изменения, чтобы закоммитить
     anagramms = []
     while True:
         print("Выберите пункт меню:\n"
