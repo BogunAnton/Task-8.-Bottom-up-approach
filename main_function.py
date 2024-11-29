@@ -19,17 +19,17 @@ def f1():
         print('error')
     return True  # Возвращаем True, чтобы указать, что текст был введен
 
-def f2(anagramms):
+def f2():
     """ Выполнение алгоритма по заданию """
     words = full_text.split()
-    anagrams = {}
+    anagramms_dictionary = {}
     for word in words:
         sorted_word = ''.join(sorted(word))
-        if sorted_word in anagrams:
-            anagrams[sorted_word].append(word)
+        if sorted_word in anagramms_dictionary:
+            anagramms_dictionary[sorted_word].append(word)
         else:
-            anagrams[sorted_word] = [word]
-    result = [group for group in anagrams.values() if len(group) > 1]
+            anagramms_dictionary[sorted_word] = [word]
+    result = [group for group in anagramms_dictionary.values() if len(group) > 1]
     print("Алгоритм выполнен")
     return result
 
